@@ -8,7 +8,7 @@ var devPaths = {
   scripts: 'assets/js/',
   images: 'assets/images/',
   fonts: 'assets/fonts/',
-  html: '',
+  html: 'dist/',
   headerFolder: '',
   headerTpl: '*.html'
 }
@@ -19,15 +19,15 @@ var distPaths = {
   images: 'dist/assets/images/',
   fonts: 'dist/assets/fonts/',
   html: 'dist/',
-  headerFolder: 'dist/',
+  headerFolder: 'build/',
   headerTpl: 'dist/*.html'
 }
 
 // browserSync
 var sync = {
   server: {
-    baseDir: ""
-  }
+    baseDir: "./dist"
+  },
 }
 
 // autoprefixer
@@ -54,5 +54,6 @@ module.exports = {
     devPaths: devPaths,
     distPaths: distPaths,
     settingsAutoprefixer: settingsAutoprefixer,
+    basepath: 'src/',
     sync: sync
 }
